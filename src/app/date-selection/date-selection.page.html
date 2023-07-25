@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Date Selection
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>From Date</ion-label>
+    <!-- Add (ionChange) event and specify CustomEvent<any> as the event type -->
+    <ion-datetime displayFormat="MM/DD/YYYY" (ionChange)="onFromDateChanged($event)"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>To Date</ion-label>
+    <!-- Add (ionChange) event and specify CustomEvent<any> as the event type -->
+    <ion-datetime displayFormat="MM/DD/YYYY" (ionChange)="onToDateChanged($event)"></ion-datetime>
+  </ion-item>
+
+  <ion-button expand="full" (click)="onDateSelection()">Submit</ion-button>
+</ion-content>
